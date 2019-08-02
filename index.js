@@ -60,6 +60,11 @@ app.post('/', async (req, res) => {
           videoId: videoBridTV.id,
           playerId: '17794',
           likes: 0,
+          local_ad_mobile_2: null,
+          local_ad_desktop_2: null,
+          local_ad_mobile_1: null,
+          local_ad_desktop_1: null,
+          use_local_advertising: null,
         })
         break
       default:
