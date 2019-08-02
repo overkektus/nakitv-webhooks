@@ -59,6 +59,7 @@ app.post('/', async (req, res) => {
           thumbnail: videoBridTV.thumbnail,
           videoId: videoBridTV.id,
           playerId: '17794',
+          likes: 0,
         })
         break
       default:
