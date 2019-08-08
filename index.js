@@ -1,5 +1,4 @@
 require('dotenv').config()
-const ngrok = require('ngrok')
 const express = require('express')
 const multer = require('multer')
 const SiteClient = require('datocms-client').SiteClient
@@ -80,16 +79,3 @@ app.post('/', async (req, res) => {
 const server = app.listen(process.env.PORT, () => {
   console.log(`Express listening at port ${server.address().port}`)
 })
-
-ngrok
-  .connect({
-    proto: 'http',
-    addr: process.env.PORT,
-    authtoken: process.env.NGROK_TOKEN,
-  })
-  .then(url => {
-    console.log(url)
-  })
-  .catch(error => {
-    console.log(error)
-  })
